@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/intern/static/css/main.a0124a72.css",
+    "main.js": "/intern/static/js/main.3303b7fd.js",
+    "static/media/fotodiri.jpg": "/intern/static/media/fotodiri.ad9775aca0175a8cebe6.jpg",
+    "index.html": "/intern/index.html",
+    "main.a0124a72.css.map": "/intern/static/css/main.a0124a72.css.map",
+    "main.3303b7fd.js.map": "/intern/static/js/main.3303b7fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0124a72.css",
+    "static/js/main.3303b7fd.js"
+  ]
+}
