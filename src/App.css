@@ -1,38 +1,362 @@
-.App {
-  text-align: center;
+html,
+* {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+::selection {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: dimgray;
+  border-radius: 5px 0px 0px 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main > :not(.landing) {
+  margin: 5rem 0 ;
+}
+
+.landing,
+.summary {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+}
+
+.about {
+  width: 100vw;
+  background-color: whitesmoke;
+  display: grid;
+  place-items: center;
+}
+
+/* Header */
+.header {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  user-select: none;
+}
+
+.photo-container {
+  width: 35vw;
+  aspect-ratio: 1;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.photo-container span {
+  overflow: hidden;
+  width: 30vw;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+/* .photo-container span::after {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(white, white);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 1  ;
+  mix-blend-mode: exclusion;
+}
+
+.photo-container span:hover::after {
+  background-size: 100% 100%;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+} */
+
+
+.little-box {
+  width: 35vw;
+  aspect-ratio: 1;
+  background-image: linear-gradient(black, black);
+  background-position: bottom top;
+  background-repeat: no-repeat;
+  background-size: 5% 5%;
+  transition: all 0.5s;
+  position: absolute;
+}
+
+.foto-diri:hover ~ .little-box {
+  background-size: 100% 100%;
+  background-image: linear-gradient(black, black);
+  background-repeat: no-repeat;
+}
+
+.foto-diri {
+  width: 30vw;
+  transform-origin: 50% 20%;
+  transition: 0.7s;
+  filter: grayscale(100);
+  z-index: 10;
+  border: 15px black double;
+}
+
+.foto-diri:hover {
+  transform: scale(2)
+}
+
+.profile-text-container {
+  width: 40vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: left;
+}
+
+.profile-text-container .name {
+  position: relative;
+}
+
+.profile-text-container .occupation {
+  position: relative;
+}
+
+.profile-text-container .name h1 {
+  color: black;
+  overflow: hidden;
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 6rem;
+
+}
+
+.name h1::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(white, white);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 0% 0%;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 2;
+  mix-blend-mode: exclusion;
+}
+
+.name h1:hover:before {
+  background-size: 100% 100%;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+}
+
+.profile-text-container p {
+  overflow: hidden;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 3rem;
+  text-align: right;
+}
+
+/* .occupation p::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(white, white);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: 2;
+  mix-blend-mode: exclusion;
+}
+
+.occupation p:hover:before {
+  background-size: 100% 100%;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+} */
+
+/* Statement */
+.statement {
+  width: 90vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+
+.statement-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.statement-container span {
+  width: 100%;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.personal-statement > * {
+  width: 70vw;
+  font-size: 35px;
+  text-align: justify;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* About */
+.about-container {
+  width: 90vw;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 0px 5rem;
+}
+
+.about-container > div {
+  position: relative;
+}
+
+.about-container span {
+  width: 100%;
+  border: 5px solid black;
+}
+
+.about-container span > :not(h2) {
+  padding: 20px;
+}
+
+.education,
+.skill,
+.language {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience,
+.project {
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.about-container h2 {
+  font-size: 6rem;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 900;
+}
+
+.about-container h3 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
+  background-color: whitesmoke;
+  font-style: italic;
+}
+
+.about-container h4 {
+  font-size: 3rem;
+}
+
+.about-container p {
+  font-size: 2rem;
+  color: dimgray;
+}
+
+.skill ul, .language ul {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 2rem;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+
+.skill li {
+  padding: 20px 30px;
+  flex-grow: 1;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.skill li:hover {
+  padding: 20px 50px;
+}
+
+.language li {
+  padding: 40px;
+  flex-grow: 1;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.language li:hover {
+  padding: 40px 60px;
 }
