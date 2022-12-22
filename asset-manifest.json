@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Sena-Mashira/Intern/static/css/main.f6d7bff6.css",
-    "main.js": "/Sena-Mashira/Intern/static/js/main.ed1ab072.js",
-    "static/media/fotodiri.jpg": "/Sena-Mashira/Intern/static/media/fotodiri.ad9775aca0175a8cebe6.jpg",
-    "index.html": "/Sena-Mashira/Intern/index.html",
-    "main.f6d7bff6.css.map": "/Sena-Mashira/Intern/static/css/main.f6d7bff6.css.map",
-    "main.ed1ab072.js.map": "/Sena-Mashira/Intern/static/js/main.ed1ab072.js.map"
+    "main.css": "/Intern/static/css/main.f6d7bff6.css",
+    "main.js": "/Intern/static/js/main.e2d286ea.js",
+    "static/media/fotodiri.jpg": "/Intern/static/media/fotodiri.ad9775aca0175a8cebe6.jpg",
+    "index.html": "/Intern/index.html",
+    "main.f6d7bff6.css.map": "/Intern/static/css/main.f6d7bff6.css.map",
+    "main.e2d286ea.js.map": "/Intern/static/js/main.e2d286ea.js.map"
   },
   "entrypoints": [
     "static/css/main.f6d7bff6.css",
-    "static/js/main.ed1ab072.js"
+    "static/js/main.e2d286ea.js"
   ]
 }
