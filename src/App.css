@@ -33,9 +33,6 @@ html,
   flex-direction: column;
 }
 
-.main > :not(.landing) {
-  margin: 5rem 0;
-}
 
 .landing,
 .summary {
@@ -46,8 +43,104 @@ html,
   background-color: whitesmoke;
 }
 
+.navbar {
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100vw;
+  position: fixed;
+}
+
+.navbar-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: black;
+  height: fit-content;
+  gap: 20px;
+}
+
+.navbar-container li {
+  padding: 10px 20px;
+}
+
+.navbar-container ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.fyve {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+.fyve-container {
+  width: 90vw;
+  height: 100vh;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+.fyve form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fyve input {
+  width: 20vw;
+  font-size: 20px;
+  aspect-ratio: 5 / 1;
+  background-color: whitesmoke;
+  /* background-color: rgba(255, 0, 0, 20%); */
+  color: black;
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-image: linear-gradient(black, black);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  transition: 0.2s;
+}
+
+.fyve input:focus {
+  background-image: linear-gradient(black, black);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
+.fyve button {
+  background-color: black;
+  width: 20vw;
+  aspect-ratio: 4 / 1;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+}
+
 .about {
   width: 100vw;
+  background-color: whitesmoke;
+  display: grid;
+  place-items: center;
+}
+
+.contact {
+  width: 100vw;
+  height: 50vh;
   background-color: whitesmoke;
   display: grid;
   place-items: center;
@@ -285,7 +378,8 @@ html,
 }
 
 .experience,
-.project, .skill {
+.project,
+.skill {
   width: 100%;
   height: 200vh;
   display: flex;
@@ -317,7 +411,8 @@ html,
   font-size: 3rem;
 }
 
-.about-container p, ul {
+.about-container p,
+ul {
   font-size: 2rem;
   color: dimgray;
 }
@@ -385,6 +480,31 @@ html,
   padding: 20px 50px;
 }
 
+.contact-container {
+  width: 90vw;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-container > section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-container > section > * {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-content: center;
+}
+
 /* Responsive */
 @media only screen and (max-width: 550px) {
 
@@ -429,6 +549,7 @@ html,
   .profile-text-container span {
     height: 100%;
   }
+
   .profile-text-container {
     width: 70vw;
     height: fit-content;
@@ -441,7 +562,7 @@ html,
   }
 
   .profile-text-container p {
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 2.5rem;
   }
@@ -482,7 +603,8 @@ html,
     font-size: 2rem;
   }
 
-  .about-container p, ul {
+  .about-container p,
+  ul {
     font-size: 1.5rem;
   }
 
@@ -493,44 +615,52 @@ html,
   .skill {
     width: 70vw;
   }
-  
-.education,
-.language {
-  width: 100%;
-  height: 100vh;
-}
 
-.project, .skill {
-  height: 200vh;
-}
+  .education,
+  .language {
+    width: 100%;
+    height: 100vh;
+  }
 
-.experience{
-  height: 100%;
-}
+  .project,
+  .skill {
+    height: 200vh;
+  }
 
-  .skill ul, .language ul {
+  .experience {
+    height: 100%;
+  }
+
+  .skill ul,
+  .language ul {
     gap: 5px;
   }
 
   .skill li {
     padding: 10px 20px;
   }
+
   .skill li:hover {
     padding: 10px 20px;
   }
+
   .language li {
     padding: 30px;
   }
+
   .language li:hover {
     padding: 30px 40px;
   }
+
   .project a {
     font-size: 1rem;
   }
+
   .project button {
     padding: 5px 20px;
     width: 100%;
   }
+
   .project :hover {
     padding: 10px 30px;
   }
@@ -580,6 +710,7 @@ html,
   .profile-text-container span {
     height: 100%;
   }
+
   .profile-text-container {
     width: 70vw;
     height: fit-content;
@@ -633,7 +764,8 @@ html,
     font-size: 2rem;
   }
 
-  .about-container p, ul {
+  .about-container p,
+  ul {
     font-size: 1.5rem;
   }
 
@@ -645,29 +777,36 @@ html,
     width: 70vw;
   }
 
-  .skill ul, .language ul {
+  .skill ul,
+  .language ul {
     gap: 5px;
   }
 
   .skill li {
     padding: 10px 20px;
   }
+
   .skill li:hover {
     padding: 10px 20px;
   }
+
   .language li {
     padding: 30px;
   }
+
   .language li:hover {
     padding: 30px 40px;
   }
+
   .project a {
     font-size: 1rem;
   }
+
   .project button {
     padding: 5px 20px;
     width: 100%;
   }
+
   .project :hover {
     padding: 10px 30px;
   }
