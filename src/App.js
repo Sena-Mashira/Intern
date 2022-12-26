@@ -28,7 +28,7 @@ function App() {
       </div>
       <Routes>
         <Route
-          path='/'
+          path='/Home'
           element={<Home />}
         />
         <Route
@@ -36,6 +36,7 @@ function App() {
           element={<Fyve />}
         />
       </Routes>
+      <Home />
     </div>
   );
 }
